@@ -29,4 +29,12 @@ def clear_text():
     text_box.delete("1.0", tk.END)
     label.config(text="💨 Text cleared due to 5 sec of no typing!")
 
+# Function to reset the timer on key press
+def on_key_press(event):
+    global timer_id
+    label.config(text="⏳ Typing...")  # reset status
+    if timer_id:
+        win.after_cancel(timer_id)  # stop old timer
+    timer_id = win.after(5000, clear_text)  # start new 5 sec timer
+
 
