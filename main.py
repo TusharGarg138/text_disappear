@@ -40,3 +40,5 @@ def on_key_press(event):
 # Bind keypress event
 text_box.bind("<Key>", on_key_press)
 
+# Run the app
+win.mainloop()
