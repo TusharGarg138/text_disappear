@@ -21,4 +21,12 @@ text_box = tk.Text(win, height=8, width=50, font=custom_font,
                    bd=0, padx=10, pady=10)
 text_box.pack(pady=10)
 
+# Variable to store timer ID
+timer_id = None
+
+# Function to clear the text
+def clear_text():
+    text_box.delete("1.0", tk.END)
+    label.config(text="💨 Text cleared due to 5 sec of no typing!")
+
 
