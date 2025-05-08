@@ -37,4 +37,6 @@ def on_key_press(event):
         win.after_cancel(timer_id)  # stop old timer
     timer_id = win.after(5000, clear_text)  # start new 5 sec timer
 
+# Bind keypress event
+text_box.bind("<Key>", on_key_press)
 
